@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <rect width="800" height="1000" fill="#f5f3ee"/>
+  <rect x="0" y="0" width="800" height="80" fill="#e63946"/>
+  <text x="60" y="55" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="700" fill="#ffffff" letter-spacing="6">03 / COVER</text>
+  <text x="740" y="55" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#ffffff" text-anchor="end" letter-spacing="2">METHODS</text>
+
+  <text x="60" y="180" font-family="Helvetica, Arial, sans-serif" font-size="72" font-weight="900" fill="#1a1a1a" letter-spacing="-2">4 步</text>
+  <text x="60" y="260" font-family="Helvetica, Arial, sans-serif" font-size="72" font-weight="900" fill="#e63946" letter-spacing="-2">封面打造</text>
+  <line x1="60" y1="300" x2="280" y2="300" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="60" y="340" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#1a1a1a" letter-spacing="2">几何构图的视觉锤</text>
+
+  <!-- 中央几何构图主图：四个色块 + 圆 -->
+  <g transform="translate(400, 580)">
+    <!-- 大圆背景 -->
+    <circle cx="0" cy="0" r="180" fill="#1a1a1a"/>
+    <circle cx="0" cy="0" r="120" fill="#f5f3ee"/>
+    <circle cx="0" cy="0" r="60" fill="#e63946"/>
+
+    <!-- 四角方块（代表 4 步）-->
+    <rect x="-220" y="-220" width="60" height="60" fill="#e63946"/>
+    <text x="-190" y="-180" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">01</text>
+
+    <rect x="160" y="-220" width="60" height="60" fill="#1a1a1a"/>
+    <text x="190" y="-180" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">02</text>
+
+    <rect x="-220" y="160" width="60" height="60" fill="#1a1a1a"/>
+    <text x="-190" y="200" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">03</text>
+
+    <rect x="160" y="160" width="60" height="60" fill="#e63946"/>
+    <text x="190" y="200" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">04</text>
+
+    <!-- 连接线 -->
+    <line x1="-160" y1="-160" x2="-100" y2="-100" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="160" y1="-160" x2="100" y2="-100" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="-160" y1="160" x2="-100" y2="100" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="160" y1="160" x2="100" y2="100" stroke="#1a1a1a" stroke-width="1"/>
+  </g>
+
+  <!-- 四步说明 -->
+  <g transform="translate(60, 820)">
+    <text x="0" y="0" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1a1a1a" letter-spacing="3">FOUR STEPS · 几何思维</text>
+    <text x="0" y="35" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="400" fill="#1a1a1a">01 抓主题  02 选色  03 构图  04 排版</text>
+    <text x="0" y="65" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="400" fill="#1a1a1a">每一张封面都是一组视觉信号</text>
+  </g>
+
+  <text x="60" y="960" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1a1a1a" letter-spacing="3">XHS · METHOD 03 / 08</text>
+  <text x="740" y="960" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1a1a1a" text-anchor="end" letter-spacing="3">范家读本</text>
+</svg>

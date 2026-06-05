@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <rect width="800" height="1000" fill="#f5f3ee"/>
+  <rect x="0" y="0" width="800" height="80" fill="#e63946"/>
+  <text x="60" y="55" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="700" fill="#ffffff" letter-spacing="6">07 / STRUCTURE</text>
+  <text x="740" y="55" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#ffffff" text-anchor="end" letter-spacing="2">METHODS</text>
+
+  <text x="60" y="180" font-family="Helvetica, Arial, sans-serif" font-size="72" font-weight="900" fill="#1a1a1a" letter-spacing="-2">5 段式</text>
+  <text x="60" y="260" font-family="Helvetica, Arial, sans-serif" font-size="72" font-weight="900" fill="#e63946" letter-spacing="-2">内容结构</text>
+  <line x1="60" y1="300" x2="320" y2="300" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="60" y="340" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#1a1a1a" letter-spacing="2">爆款笔记的通用骨架</text>
+
+  <!-- 5 段式层级图：金字塔 -->
+  <g transform="translate(400, 640)">
+    <!-- 顶 -->
+    <polygon points="0,-180 80,-120 -80,-120" fill="#e63946"/>
+    <text x="0" y="-140" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">钩子</text>
+
+    <!-- 第二层 -->
+    <polygon points="-80,-120 80,-120 130,-60 -130,-60" fill="#1a1a1a"/>
+    <text x="0" y="-80" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">痛点</text>
+
+    <!-- 第三层 -->
+    <polygon points="-130,-60 130,-60 180,0 -180,0" fill="#e63946"/>
+    <text x="0" y="-20" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">方法</text>
+
+    <!-- 第四层 -->
+    <polygon points="-180,0 180,0 220,60 -220,60" fill="#1a1a1a"/>
+    <text x="0" y="40" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">案例</text>
+
+    <!-- 第五层 -->
+    <polygon points="-220,60 220,60 270,130 -270,130" fill="#e63946"/>
+    <text x="0" y="105" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">行动</text>
+  </g>
+
+  <!-- 5 段说明 -->
+  <g transform="translate(60, 860)">
+    <text x="0" y="0" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1a1a1a" letter-spacing="3">FIVE LAYERS</text>
+    <text x="0" y="35" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="400" fill="#1a1a1a">钩子 → 痛点 → 方法 → 案例 → 行动</text>
+    <text x="0" y="65" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="400" fill="#1a1a1a">从吸引到转化，结构化叙事</text>
+  </g>
+
+  <!-- 左侧百分比刻度 -->
+  <g transform="translate(60, 440)">
+    <line x1="0" y1="0" x2="0" y2="380" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="-5" y1="0" x2="5" y2="0" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="-5" y1="95" x2="5" y2="95" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="-5" y1="190" x2="5" y2="190" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="-5" y1="285" x2="5" y2="285" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="-5" y1="380" x2="5" y2="380" stroke="#1a1a1a" stroke-width="1"/>
+    <text x="-15" y="5" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1a1a1a" text-anchor="end">3s</text>
+    <text x="-15" y="100" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1a1a1a" text-anchor="end">15s</text>
+    <text x="-15" y="195" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1a1a1a" text-anchor="end">30s</text>
+    <text x="-15" y="290" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1a1a1a" text-anchor="end">45s</text>
+    <text x="-15" y="385" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1a1a1a" text-anchor="end">60s</text>
+  </g>
+
+  <text x="60" y="960" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1a1a1a" letter-spacing="3">XHS · METHOD 07 / 08</text>
+  <text x="740" y="960" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1a1a1a" text-anchor="end" letter-spacing="3">范家读本</text>
+</svg>

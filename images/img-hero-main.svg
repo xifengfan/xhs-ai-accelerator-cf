@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <!-- 极简黑底主图 -->
+  <rect width="800" height="1000" fill="#1a1a1a"/>
+
+  <!-- 大色块：朱砂红 -->
+  <rect x="0" y="0" width="800" height="360" fill="#e63946"/>
+
+  <!-- 顶部细线 -->
+  <line x1="60" y1="60" x2="740" y2="60" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+  <text x="60" y="50" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#ffffff" letter-spacing="3" opacity="0.7">XHS · AI ACCELERATOR</text>
+  <text x="740" y="50" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#ffffff" letter-spacing="3" opacity="0.7" text-anchor="end">2026</text>
+
+  <!-- 主标题：单色统一白字，避免色块切割的视觉错位 -->
+  <text x="60" y="180" font-family="Helvetica, Arial, sans-serif" font-size="80" font-weight="900" fill="#ffffff" letter-spacing="-2">小红书</text>
+  <text x="60" y="280" font-family="Helvetica, Arial, sans-serif" font-size="80" font-weight="900" fill="#ffffff" letter-spacing="-2">AI 加速器</text>
+  <line x1="60" y1="320" x2="200" y2="320" stroke="#1a1a1a" stroke-width="3"/>
+
+  <!-- 中央几何主图 -->
+  <g transform="translate(400, 600)">
+    <!-- 大圆 -->
+    <circle cx="0" cy="0" r="180" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="0" cy="0" r="120" fill="none" stroke="#e63946" stroke-width="2"/>
+    <circle cx="0" cy="0" r="60" fill="#e63946"/>
+    <text x="0" y="20" font-family="Helvetica, Arial, sans-serif" font-size="48" font-weight="900" fill="#ffffff" text-anchor="middle">8</text>
+
+    <!-- 十字辅助线 -->
+    <line x1="-220" y1="0" x2="-200" y2="0" stroke="#ffffff" stroke-width="2"/>
+    <line x1="220" y1="0" x2="200" y2="0" stroke="#ffffff" stroke-width="2"/>
+    <line x1="0" y1="-220" x2="0" y2="-200" stroke="#ffffff" stroke-width="2"/>
+    <line x1="0" y1="220" x2="0" y2="200" stroke="#ffffff" stroke-width="2"/>
+  </g>
+
+  <!-- 主公 ID 区 -->
+  <g transform="translate(60, 850)">
+    <line x1="0" y1="0" x2="60" y2="0" stroke="#e63946" stroke-width="3"/>
+    <text x="0" y="35" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="900" fill="#ffffff" letter-spacing="1">范家读本</text>
+    <text x="0" y="65" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#ffffff" letter-spacing="2" opacity="0.7">8 篇方法论 · 从 0 到 1 的实操手册</text>
+  </g>
+
+  <!-- 右下角小标识 -->
+  <g transform="translate(740, 940)">
+    <text x="0" y="0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#e63946" text-anchor="end" letter-spacing="3">HERO · 01 / 01</text>
+  </g>
+</svg>

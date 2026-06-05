@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <rect width="800" height="1000" fill="#f5f3ee"/>
+  <rect x="0" y="0" width="800" height="80" fill="#e63946"/>
+  <text x="60" y="55" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="700" fill="#ffffff" letter-spacing="6">08 / METRICS</text>
+  <text x="740" y="55" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#ffffff" text-anchor="end" letter-spacing="2">METHODS</text>
+
+  <text x="60" y="180" font-family="Helvetica, Arial, sans-serif" font-size="72" font-weight="900" fill="#1a1a1a" letter-spacing="-2">4 个</text>
+  <text x="60" y="260" font-family="Helvetica, Arial, sans-serif" font-size="72" font-weight="900" fill="#e63946" letter-spacing="-2">复盘指标</text>
+  <line x1="60" y1="300" x2="320" y2="300" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="60" y="340" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#1a1a1a" letter-spacing="2">数据驱动的迭代闭环</text>
+
+  <!-- 主图：柱状图 + 折线图混合 -->
+  <g transform="translate(60, 440)">
+    <!-- 坐标轴 -->
+    <line x1="0" y1="320" x2="680" y2="320" stroke="#1a1a1a" stroke-width="2"/>
+    <line x1="0" y1="0" x2="0" y2="320" stroke="#1a1a1a" stroke-width="2"/>
+
+    <!-- 网格线 -->
+    <line x1="0" y1="80" x2="680" y2="80" stroke="#1a1a1a" stroke-width="0.5" opacity="0.2"/>
+    <line x1="0" y1="160" x2="680" y2="160" stroke="#1a1a1a" stroke-width="0.5" opacity="0.2"/>
+    <line x1="0" y1="240" x2="680" y2="240" stroke="#1a1a1a" stroke-width="0.5" opacity="0.2"/>
+
+    <!-- 柱状图（4 个指标）-->
+    <rect x="60" y="180" width="100" height="140" fill="#e63946"/>
+    <rect x="220" y="120" width="100" height="200" fill="#e63946"/>
+    <rect x="380" y="60" width="100" height="260" fill="#1a1a1a"/>
+    <rect x="540" y="100" width="100" height="220" fill="#e63946"/>
+
+    <!-- 折线（增长趋势）-->
+    <polyline points="110,200 270,140 430,80 590,120" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+    <circle cx="110" cy="200" r="6" fill="#1a1a1a"/>
+    <circle cx="270" cy="140" r="6" fill="#1a1a1a"/>
+    <circle cx="430" cy="80" r="6" fill="#e63946"/>
+    <circle cx="590" cy="120" r="6" fill="#1a1a1a"/>
+
+    <!-- X 轴标签 -->
+    <text x="110" y="345" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1a1a1a" text-anchor="middle">曝光</text>
+    <text x="270" y="345" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1a1a1a" text-anchor="middle">点击率</text>
+    <text x="430" y="345" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1a1a1a" text-anchor="middle">互动率</text>
+    <text x="590" y="345" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1a1a1a" text-anchor="middle">涨粉率</text>
+
+    <!-- Y 轴标签 -->
+    <text x="-15" y="325" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1a1a1a" text-anchor="end">0</text>
+    <text x="-15" y="245" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1a1a1a" text-anchor="end">25</text>
+    <text x="-15" y="165" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1a1a1a" text-anchor="end">50</text>
+    <text x="-15" y="85" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1a1a1a" text-anchor="end">75</text>
+  </g>
+
+  <!-- 4 指标说明 -->
+  <g transform="translate(60, 820)">
+    <text x="0" y="0" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1a1a1a" letter-spacing="3">FOUR KPIs · WEEKLY</text>
+    <text x="0" y="35" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="400" fill="#1a1a1a">曝光  ·  点击率  ·  互动率  ·  涨粉率</text>
+    <text x="0" y="65" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="400" fill="#1a1a1a">每周复盘一次，找到你的内容杠杆点</text>
+  </g>
+
+  <text x="60" y="960" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1a1a1a" letter-spacing="3">XHS · METHOD 08 / 08</text>
+  <text x="740" y="960" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1a1a1a" text-anchor="end" letter-spacing="3">范家读本</text>
+</svg>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>小红书 AI 加速器 · 让好内容被看见</title>
+  <meta name="description" content="用 AI 解决小红书选题、起标题、写文案的难题，3.9 元起。" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#fff1f0',
+              100: '#ffdedb',
+              500: '#e63946',  /* 朱砂红主色（D1 占位，待蔡文姬校准） */
+              600: '#c1121f',
+              900: '#780000',
+            },
+            ink: {
+              900: '#1a1a1a',
+              700: '#3d3d3d',
+              500: '#737373',
+              300: '#d4d4d4',
+              100: '#f5f5f5',
+            }
+          },
+          fontFamily: {
+            sans: ['"PingFang SC"', '"Microsoft YaHei"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-ink-900 font-sans antialiased">
+
+  <!-- ========== 顶部导航 ========== -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-ink-100">
+    <nav class="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="w-7 h-7 rounded-md bg-brand-500 text-white grid place-items-center font-bold">小</span>
+        <span class="font-semibold">小红书 AI 加速器</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-6 text-sm text-ink-700">
+        <li><a href="tools.html"   class="hover:text-brand-500">AI 工具</a></li>
+        <li><a href="methods.html" class="hover:text-brand-500">方法论</a></li>
+        <li><a href="pricing.html" class="hover:text-brand-500">定价</a></li>
+        <li class="text-ink-500">积分：<span id="nav-points" class="text-brand-500 font-semibold">10</span></li>
+      </ul>
+      <a href="pricing.html" class="hidden md:inline-block px-3 py-1.5 text-sm rounded-md bg-brand-500 text-white hover:bg-brand-600">立即开通</a>
+      <button class="md:hidden p-2" aria-label="菜单">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M3 5h14v2H3zM3 9h14v2H3zM3 13h14v2H3z"/></svg>
+      </button>
+    </nav>
+    <!-- ad-slot-1: 导航栏广告位，预留 -->
+    <div class="ad-slot-1 hidden bg-ink-100 border-y border-ink-300" data-ad="true" data-slot="nav">
+      <div class="max-w-6xl mx-auto px-4 py-2 text-xs text-ink-500 flex items-center justify-center gap-2">
+        <span class="px-1.5 py-0.5 rounded bg-amber-100 text-amber-700">广告</span>
+        <span>（广告位 1：导航栏下方 · 728x90 / 移动端通栏）</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== 区块 1：Hero ========== -->
+    <section class="py-16 md:py-24 bg-gradient-to-b from-white to-ink-100">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <p class="text-sm text-brand-500 font-medium mb-3">小红书创作者的 AI 副驾</p>
+        <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-4">
+          选题卡壳 3 小时，<br class="md:hidden" />
+          AI 帮你 <span class="text-brand-500">30 秒搞定</span>
+        </h1>
+        <p class="text-ink-700 text-base md:text-lg max-w-xl mx-auto mb-8">
+          起标题、写文案、找爆款——3 个动作，1 杯奶茶钱。
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="pricing.html" class="px-6 py-3 rounded-md bg-brand-500 text-white font-medium hover:bg-brand-600">立即体验 · 3.9 元起</a>
+          <a href="tools.html" class="px-6 py-3 rounded-md border border-ink-300 text-ink-700 hover:border-brand-500 hover:text-brand-500">先看看工具</a>
+        </div>
+        <p class="mt-4 text-xs text-ink-500">注册即送 10 积分 · 无需绑卡</p>
+      </div>
+    </section>
+
+    <!-- ========== 区块 2：痛点 ========== -->
+    <section class="py-16 md:py-20">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-3">为什么你做不出小红书？</h2>
+        <p class="text-center text-ink-500 mb-12">90% 的创作者卡在第一步</p>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="p-6 rounded-lg border border-ink-100 hover:border-brand-500 transition">
+            <div class="w-10 h-10 rounded-md bg-brand-50 text-brand-500 grid place-items-center text-xl mb-4">①</div>
+            <h3 class="font-semibold mb-2">选题没灵感</h3>
+            <p class="text-sm text-ink-700">刷了 2 小时笔记，越刷越迷茫，最后发了个朋友圈。</p>
+          </article>
+          <article class="p-6 rounded-lg border border-ink-100 hover:border-brand-500 transition">
+            <div class="w-10 h-10 rounded-md bg-brand-50 text-brand-500 grid place-items-center text-xl mb-4">②</div>
+            <h3 class="font-semibold mb-2">标题没吸引力</h3>
+            <p class="text-sm text-ink-700">写完正文才发现——标题就是决定打开率的第一关。</p>
+          </article>
+          <article class="p-6 rounded-lg border border-ink-100 hover:border-brand-500 transition">
+            <div class="w-10 h-10 rounded-md bg-brand-50 text-brand-500 grid place-items-center text-xl mb-4">③</div>
+            <h3 class="font-semibold mb-2">工具不会用</h3>
+            <p class="text-sm text-ink-700">Coze、ChatGPT、Claude 一通装，却不知道从哪下手。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ad-slot-2: 首页中部广告位，预留 ========== -->
+    <div class="ad-slot-2 hidden my-4" data-ad="true" data-slot="home-mid">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="rounded-lg border-2 border-dashed border-ink-300 bg-ink-100 p-6 text-center text-sm text-ink-500">
+          <span class="inline-block px-2 py-0.5 rounded bg-amber-100 text-amber-700 mr-2">推广</span>
+          （广告位 2：首页中部 · 3:1 横栏 / 移动端 1:1）
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== 区块 3：解决方案 ========== -->
+    <section class="py-16 md:py-20 bg-ink-100">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-3">两个 AI 工具，3 分钟搞定一篇笔记</h2>
+        <p class="text-center text-ink-500 mb-12">由 AI 驱动 · 持续迭代</p>
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="tools.html#title" class="group p-8 rounded-lg bg-white border border-ink-100 hover:border-brand-500 hover:shadow-lg transition">
+            <div class="flex items-start justify-between mb-4">
+              <span class="text-3xl">✍️</span>
+              <span class="text-xs text-brand-500">1 积分/次</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 group-hover:text-brand-500">爆款标题生成器</h3>
+            <p class="text-sm text-ink-700">输入主题，输出 5 个高 CTR 标题 + 钩子句 + emoji 建议。</p>
+            <p class="mt-4 text-sm text-brand-500">立即使用 →</p>
+          </a>
+          <a href="tools.html#note" class="group p-8 rounded-lg bg-white border border-ink-100 hover:border-brand-500 hover:shadow-lg transition">
+            <div class="flex items-start justify-between mb-4">
+              <span class="text-3xl">🪄</span>
+              <span class="text-xs text-brand-500">1 积分/次</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 group-hover:text-brand-500">小红书笔记生成</h3>
+            <p class="text-sm text-ink-700">输入主题，输出 500 字小红书爆款笔记 + 3 个话题标签。</p>
+            <p class="mt-4 text-sm text-brand-500">立即使用 →</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 区块 4：方法论入口 ========== -->
+    <section class="py-16 md:py-20">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-3">免费方法论：先理解，再上 AI</h2>
+        <p class="text-ink-500 mb-8">AI 是放大器，不是替代品。基础认知要打牢。</p>
+        <a href="methods.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-ink-300 hover:border-brand-500 hover:text-brand-500">
+          查看方法论合集
+          <span aria-hidden>→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== 区块 5：价格 ========== -->
+    <section class="py-16 md:py-20 bg-ink-100">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-3">选个套餐，开始你的爆款之路</h2>
+        <p class="text-center text-ink-500 mb-12">不绑卡，不订阅，用完再买</p>
+        <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <article class="p-8 rounded-lg bg-white border border-ink-100">
+            <h3 class="font-semibold mb-1">体验包</h3>
+            <p class="text-sm text-ink-500 mb-4">先试试水</p>
+            <p class="text-4xl font-bold mb-1"><span class="text-brand-500">3.9</span><span class="text-base text-ink-500 font-normal"> 元</span></p>
+            <p class="text-sm text-ink-700 mb-6">10 积分 · 约 10 次工具调用</p>
+            <button onclick="App.purchase('trial_3.9')" class="block w-full py-3 rounded-md border border-brand-500 text-brand-500 hover:bg-brand-50">购买体验包</button>
+          </article>
+          <article class="p-8 rounded-lg bg-white border-2 border-brand-500 relative">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 text-xs rounded-full bg-brand-500 text-white">推荐</span>
+            <h3 class="font-semibold mb-1">月卡</h3>
+            <p class="text-sm text-ink-500 mb-4">认真做号的选择</p>
+            <p class="text-4xl font-bold mb-1"><span class="text-brand-500">9.9</span><span class="text-base text-ink-500 font-normal"> 元/月</span></p>
+            <p class="text-sm text-ink-700 mb-6">100 积分/月 + 优先体验新工具</p>
+            <button onclick="App.purchase('monthly_9.9')" class="block w-full py-3 rounded-md bg-brand-500 text-white hover:bg-brand-600">购买月卡</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== 页脚 ========== -->
+  <footer class="border-t border-ink-100 py-8 text-center text-xs text-ink-500">
+    <p>© 2026 小红书 AI 加速器 · 让好内容被看见</p>
+    <p class="mt-2">
+      <a href="tools.html"   class="hover:text-brand-500">工具</a> ·
+      <a href="methods.html" class="hover:text-brand-500">方法论</a> ·
+      <a href="pricing.html" class="hover:text-brand-500">定价</a>
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // 初始化：积分显示 + 埋点
+    document.addEventListener('DOMContentLoaded', () => {
+      App.init();
+      App.track('page_view', { page: 'home' });
+      App.refreshPointsBadge();
+      // D1 占位：广告位默认隐藏，未来通过 A/B 平台或后端开关触发显示
+    });
+  </script>
+</body>
+</html>

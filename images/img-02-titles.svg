@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <rect width="800" height="1000" fill="#f5f3ee"/>
+  <rect x="0" y="0" width="800" height="80" fill="#e63946"/>
+  <text x="60" y="55" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="700" fill="#ffffff" letter-spacing="6">02 / TITLES</text>
+  <text x="740" y="55" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#ffffff" text-anchor="end" letter-spacing="2">METHODS</text>
+
+  <text x="60" y="180" font-family="Helvetica, Arial, sans-serif" font-size="72" font-weight="900" fill="#1a1a1a" letter-spacing="-2">5 类</text>
+  <text x="60" y="260" font-family="Helvetica, Arial, sans-serif" font-size="72" font-weight="900" fill="#e63946" letter-spacing="-2">爆款标题</text>
+  <line x1="60" y1="300" x2="280" y2="300" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="60" y="340" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#1a1a1a" letter-spacing="2">点击率 10x 的标题公式</text>
+
+  <!-- 右上角引号装饰 -->
+  <text x="700" y="220" font-family="Georgia, serif" font-size="240" font-weight="900" fill="#e63946" text-anchor="middle" opacity="0.15">"</text>
+
+  <!-- 5 个标题类型 -->
+  <g transform="translate(60, 420)">
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="680" height="85" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+      <text x="25" y="35" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#e63946" letter-spacing="2">01 · 数字型</text>
+      <text x="25" y="68" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="900" fill="#1a1a1a">7 天 0 粉 → 1000 粉，我做对了 3 件事</text>
+    </g>
+    <g transform="translate(0, 100)">
+      <rect x="0" y="0" width="680" height="85" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+      <text x="25" y="35" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#e63946" letter-spacing="2">02 · 痛点型</text>
+      <text x="25" y="68" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="900" fill="#1a1a1a">封面点击率低？这 4 个错误你别再犯</text>
+    </g>
+    <g transform="translate(0, 200)">
+      <rect x="0" y="0" width="680" height="85" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+      <text x="25" y="35" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#e63946" letter-spacing="2">03 · 反转型</text>
+      <text x="25" y="68" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="900" fill="#1a1a1a">小红书不是朋友圈，90% 的人理解错了</text>
+    </g>
+    <g transform="translate(0, 300)">
+      <rect x="0" y="0" width="680" height="85" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+      <text x="25" y="35" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#e63946" letter-spacing="2">04 · 教程型</text>
+      <text x="25" y="68" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="900" fill="#1a1a1a">手把手教你：5 步打造高点击封面</text>
+    </g>
+    <g transform="translate(0, 400)">
+      <rect x="0" y="0" width="680" height="85" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="1"/>
+      <text x="25" y="35" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#e63946" letter-spacing="2">05 · 悬念型</text>
+      <text x="25" y="68" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="900" fill="#ffffff">从月入 3k 到月入 3w，我只改了这一点</text>
+    </g>
+  </g>
+
+  <text x="60" y="960" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1a1a1a" letter-spacing="3">XHS · METHOD 02 / 08</text>
+  <text x="740" y="960" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1a1a1a" text-anchor="end" letter-spacing="3">范家读本</text>
+</svg>

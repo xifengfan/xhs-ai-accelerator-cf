@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>定价 · 小红书 AI 加速器</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand: { 50:'#fff1f0', 100:'#ffdedb', 500:'#e63946', 600:'#c1121f', 900:'#780000' },
+          ink:   { 900:'#1a1a1a', 700:'#3d3d3d', 500:'#737373', 300:'#d4d4d4', 100:'#f5f5f5' }
+        }
+      }}
+    }
+  </script>
+</head>
+<body class="bg-white text-ink-900 font-sans antialiased">
+
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-ink-100">
+    <nav class="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="w-7 h-7 rounded-md bg-brand-500 text-white grid place-items-center font-bold">小</span>
+        <span class="font-semibold">小红书 AI 加速器</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-6 text-sm text-ink-700">
+        <li><a href="tools.html"   class="hover:text-brand-500">AI 工具</a></li>
+        <li><a href="methods.html" class="hover:text-brand-500">方法论</a></li>
+        <li><a href="pricing.html" class="text-brand-500 font-medium">定价</a></li>
+        <li class="text-ink-500">积分：<span id="nav-points" class="text-brand-500 font-semibold">10</span></li>
+      </ul>
+    </nav>
+    <div class="ad-slot-1 hidden bg-ink-100 border-y border-ink-300" data-ad="true" data-slot="nav">
+      <div class="max-w-6xl mx-auto px-4 py-2 text-xs text-ink-500 text-center">
+        <span class="px-1.5 py-0.5 rounded bg-amber-100 text-amber-700 mr-2">广告</span>
+        （广告位 1：导航栏下方）
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 py-16">
+    <div class="text-center mb-12">
+      <h1 class="text-3xl md:text-4xl font-bold mb-2">简单定价 · 不绑卡不订阅</h1>
+      <p class="text-ink-500">用完再买 · 你的节奏你做主</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <article class="p-8 rounded-lg bg-white border border-ink-100">
+        <h2 class="text-xl font-semibold mb-1">体验包</h2>
+        <p class="text-sm text-ink-500 mb-6">先试试水</p>
+        <p class="text-5xl font-bold mb-1"><span class="text-brand-500">3.9</span><span class="text-base text-ink-500 font-normal"> 元</span></p>
+        <p class="text-sm text-ink-700 mb-6">10 积分 · 约 10 次工具调用</p>
+        <ul class="text-sm text-ink-700 space-y-2 mb-8">
+          <li>✅ 爆款标题生成器</li>
+          <li>✅ 笔记润色改写</li>
+          <li>✅ 积分永久有效</li>
+        </ul>
+        <button onclick="App.purchase('trial_3.9')" class="block w-full py-3 rounded-md border border-brand-500 text-brand-500 hover:bg-brand-50 font-medium">购买体验包</button>
+      </article>
+
+      <article class="p-8 rounded-lg bg-white border-2 border-brand-500 relative">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 text-xs rounded-full bg-brand-500 text-white">最受欢迎</span>
+        <h2 class="text-xl font-semibold mb-1">月卡</h2>
+        <p class="text-sm text-ink-500 mb-6">认真做号的选择</p>
+        <p class="text-5xl font-bold mb-1"><span class="text-brand-500">9.9</span><span class="text-base text-ink-500 font-normal"> 元/月</span></p>
+        <p class="text-sm text-ink-700 mb-6">100 积分/月 + 优先体验新工具</p>
+        <ul class="text-sm text-ink-700 space-y-2 mb-8">
+          <li>✅ 体验包全部功能</li>
+          <li>✅ 每月 100 积分</li>
+          <li>✅ 新工具优先体验</li>
+          <li>✅ 微信群答疑</li>
+        </ul>
+        <button onclick="App.purchase('monthly_9.9')" class="block w-full py-3 rounded-md bg-brand-500 text-white hover:bg-brand-600 font-medium">购买月卡</button>
+      </article>
+    </div>
+
+    <p class="mt-10 text-center text-xs text-ink-500">支付由微信 / 支付宝处理 · 7 天无理由退款</p>
+  </main>
+
+  <footer class="border-t border-ink-100 py-8 text-center text-xs text-ink-500">
+    <p>© 2026 小红书 AI 加速器</p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      App.init();
+      App.track('page_view', { page: 'pricing' });
+      App.refreshPointsBadge();
+    });
+  </script>
+</body>
+</html>

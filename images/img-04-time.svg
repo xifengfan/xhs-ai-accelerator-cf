@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <rect width="800" height="1000" fill="#f5f3ee"/>
+  <rect x="0" y="0" width="800" height="80" fill="#e63946"/>
+  <text x="60" y="55" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="700" fill="#ffffff" letter-spacing="6">04 / TIMING</text>
+  <text x="740" y="55" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#ffffff" text-anchor="end" letter-spacing="2">METHODS</text>
+
+  <text x="60" y="180" font-family="Helvetica, Arial, sans-serif" font-size="72" font-weight="900" fill="#1a1a1a" letter-spacing="-2">黄金</text>
+  <text x="60" y="260" font-family="Helvetica, Arial, sans-serif" font-size="72" font-weight="900" fill="#e63946" letter-spacing="-2">发布时间</text>
+  <line x1="60" y1="300" x2="280" y2="300" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="60" y="340" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#1a1a1a" letter-spacing="2">4 段黄金时段 · 流量密码</text>
+
+  <!-- 中央 4 段环形时钟：使用 circle 环 + rect 块拼接（避免 path A 命令的渲染陷阱）-->
+  <g transform="translate(400, 580)">
+    <!-- 外环底（黑/红交替）使用 4 个圆环扇形片段 -->
+    <!-- 右上扇形 -->
+    <g>
+      <path d="M 0,-180 A 180,180 0 0,1 180,0 L 130,0 A 130,130 0 0,0 0,-130 Z" fill="#e63946" fill-rule="evenodd"/>
+    </g>
+    <!-- 右下扇形 -->
+    <path d="M 180,0 A 180,180 0 0,1 0,180 L 0,130 A 130,130 0 0,0 130,0 Z" fill="#1a1a1a"/>
+    <!-- 左下扇形 -->
+    <path d="M 0,180 A 180,180 0 0,1 -180,0 L -130,0 A 130,130 0 0,0 0,130 Z" fill="#e63946"/>
+    <!-- 左上扇形 -->
+    <path d="M -180,0 A 180,180 0 0,1 0,-180 L 0,-130 A 130,130 0 0,0 -130,0 Z" fill="#1a1a1a"/>
+    <!-- 中心镂空：实心米色圆覆盖 -->
+    <circle cx="0" cy="0" r="120" fill="#f5f3ee"/>
+    <!-- 中心红点 -->
+    <circle cx="0" cy="0" r="8" fill="#e63946"/>
+    <!-- 12 点钟指针（朱砂红）-->
+    <line x1="0" y1="0" x2="0" y2="-160" stroke="#e63946" stroke-width="3"/>
+  </g>
+
+  <!-- 4 段时间标签 -->
+  <g transform="translate(60, 820)">
+    <text x="0" y="0" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1a1a1a" letter-spacing="3">FOUR SLOTS · 24H</text>
+    <text x="0" y="40" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#1a1a1a">07:00 早通勤   12:00 午高峰   19:00 晚高峰   22:00 睡前</text>
+  </g>
+
+  <!-- 四个时段引线 -->
+  <g stroke="#1a1a1a" stroke-width="1" fill="none">
+    <line x1="580" y1="400" x2="720" y2="380"/>
+    <line x1="580" y1="760" x2="720" y2="780"/>
+    <line x1="220" y1="760" x2="80" y2="780"/>
+    <line x1="220" y1="400" x2="80" y2="380"/>
+  </g>
+  <g font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1a1a1a" letter-spacing="1">
+    <text x="720" y="375" text-anchor="start">12:00</text>
+    <text x="720" y="775" text-anchor="start">19:00</text>
+    <text x="80" y="775" text-anchor="end">22:00</text>
+    <text x="80" y="375" text-anchor="end">07:00</text>
+  </g>
+
+  <text x="60" y="960" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1a1a1a" letter-spacing="3">XHS · METHOD 04 / 08</text>
+  <text x="740" y="960" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1a1a1a" text-anchor="end" letter-spacing="3">范家读本</text>
+</svg>

@@ -1,0 +1,7 @@
+name = "xhs-ai-accelerator"
+compatibility_date = "2024-09-23"
+pages_build_output_dir = "."
+
+[build]
+# Cloudflare Pages 直接把仓库根目录作为静态文件
+# functions/ 目录会自动被识别为 Functions

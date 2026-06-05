@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <!-- 背景：米白 -->
+  <rect width="800" height="1000" fill="#f5f3ee"/>
+  <!-- 顶部色带：朱砂红 -->
+  <rect x="0" y="0" width="800" height="80" fill="#e63946"/>
+  <text x="60" y="55" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="700" fill="#ffffff" letter-spacing="6">01 / 7-DAY SOP</text>
+  <text x="740" y="55" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#ffffff" text-anchor="end" letter-spacing="2">METHODS</text>
+
+  <!-- 大标题 -->
+  <text x="60" y="180" font-family="Helvetica, Arial, sans-serif" font-size="72" font-weight="900" fill="#1a1a1a" letter-spacing="-2">7 天</text>
+  <text x="60" y="260" font-family="Helvetica, Arial, sans-serif" font-size="72" font-weight="900" fill="#e63946" letter-spacing="-2">SOP</text>
+  <line x1="60" y1="300" x2="280" y2="300" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="60" y="340" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#1a1a1a" letter-spacing="2">从 0 到 1 的标准化流程</text>
+
+  <!-- 时钟主图 -->
+  <g transform="translate(560, 200)">
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#1a1a1a" stroke-width="3"/>
+    <circle cx="0" cy="0" r="6" fill="#e63946"/>
+    <!-- 时钟刻度 7 段 -->
+    <line x1="0" y1="-100" x2="0" y2="-85" stroke="#1a1a1a" stroke-width="2"/>
+    <line x1="74" y1="-67" x2="63" y2="-57" stroke="#1a1a1a" stroke-width="2"/>
+    <line x1="100" y1="0" x2="85" y2="0" stroke="#1a1a1a" stroke-width="2"/>
+    <line x1="74" y1="67" x2="63" y2="57" stroke="#1a1a1a" stroke-width="2"/>
+    <line x1="0" y1="100" x2="0" y2="85" stroke="#1a1a1a" stroke-width="2"/>
+    <line x1="-74" y1="67" x2="-63" y2="57" stroke="#1a1a1a" stroke-width="2"/>
+    <line x1="-100" y1="0" x2="-85" y2="0" stroke="#1a1a1a" stroke-width="2"/>
+    <line x1="-74" y1="-67" x2="-63" y2="-57" stroke="#1a1a1a" stroke-width="2"/>
+    <!-- 时针/分针 -->
+    <line x1="0" y1="0" x2="0" y2="-65" stroke="#1a1a1a" stroke-width="4"/>
+    <line x1="0" y1="0" x2="55" y2="30" stroke="#e63946" stroke-width="3"/>
+    <!-- 数字 7 -->
+    <text x="0" y="20" font-family="Helvetica, Arial, sans-serif" font-size="48" font-weight="900" fill="#e63946" text-anchor="middle">7</text>
+  </g>
+
+  <!-- 7 步流程 -->
+  <g transform="translate(60, 420)">
+    <text x="0" y="0" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1a1a1a" letter-spacing="3">DAY 01 — DAY 07</text>
+
+    <g transform="translate(0, 30)">
+      <rect x="0" y="0" width="680" height="50" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+      <rect x="0" y="0" width="50" height="50" fill="#e63946"/>
+      <text x="25" y="33" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">1</text>
+      <text x="75" y="33" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#1a1a1a">账号定位 · 人设设定</text>
+    </g>
+    <g transform="translate(0, 90)">
+      <rect x="0" y="0" width="680" height="50" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+      <rect x="0" y="0" width="50" height="50" fill="#e63946"/>
+      <text x="25" y="33" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">2</text>
+      <text x="75" y="33" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#1a1a1a">选题库搭建 · 关键词抓取</text>
+    </g>
+    <g transform="translate(0, 150)">
+      <rect x="0" y="0" width="680" height="50" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+      <rect x="0" y="0" width="50" height="50" fill="#e63946"/>
+      <text x="25" y="33" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">3</text>
+      <text x="75" y="33" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#1a1a1a">封面模板 · 视觉系统</text>
+    </g>
+    <g transform="translate(0, 210)">
+      <rect x="0" y="0" width="680" height="50" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+      <rect x="0" y="0" width="50" height="50" fill="#e63946"/>
+      <text x="25" y="33" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">4</text>
+      <text x="75" y="33" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#1a1a1a">5 段式内容结构</text>
+    </g>
+    <g transform="translate(0, 270)">
+      <rect x="0" y="0" width="680" height="50" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+      <rect x="0" y="0" width="50" height="50" fill="#e63946"/>
+      <text x="25" y="33" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">5</text>
+      <text x="75" y="33" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#1a1a1a">黄金时间 · 节奏发布</text>
+    </g>
+    <g transform="translate(0, 330)">
+      <rect x="0" y="0" width="680" height="50" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+      <rect x="0" y="0" width="50" height="50" fill="#e63946"/>
+      <text x="25" y="33" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">6</text>
+      <text x="75" y="33" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#1a1a1a">评论维护 · 互动矩阵</text>
+    </g>
+    <g transform="translate(0, 390)">
+      <rect x="0" y="0" width="680" height="50" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="1"/>
+      <rect x="0" y="0" width="50" height="50" fill="#e63946"/>
+      <text x="25" y="33" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">7</text>
+      <text x="75" y="33" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">复盘 · 数据指标</text>
+    </g>
+  </g>
+
+  <!-- 底部页码 -->
+  <text x="60" y="960" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1a1a1a" letter-spacing="3">XHS · METHOD 01 / 08</text>
+  <text x="740" y="960" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1a1a1a" text-anchor="end" letter-spacing="3">范家读本</text>
+</svg>

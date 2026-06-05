@@ -1,0 +1,8 @@
+node_modules/
+.wrangler/
+.vercel/
+.DS_Store
+*.log
+.env
+.env.local
+agent_reach_cache/

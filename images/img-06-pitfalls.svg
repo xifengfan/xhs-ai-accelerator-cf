@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <rect width="800" height="1000" fill="#f5f3ee"/>
+  <rect x="0" y="0" width="800" height="80" fill="#e63946"/>
+  <text x="60" y="55" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="700" fill="#ffffff" letter-spacing="6">06 / PITFALLS</text>
+  <text x="740" y="55" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#ffffff" text-anchor="end" letter-spacing="2">METHODS</text>
+
+  <text x="60" y="180" font-family="Helvetica, Arial, sans-serif" font-size="72" font-weight="900" fill="#1a1a1a" letter-spacing="-2">10 个</text>
+  <text x="60" y="260" font-family="Helvetica, Arial, sans-serif" font-size="72" font-weight="900" fill="#e63946" letter-spacing="-2">避坑指南</text>
+  <line x1="60" y1="300" x2="320" y2="300" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="60" y="340" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#1a1a1a" letter-spacing="2">新手必踩的 10 个雷区</text>
+
+  <!-- 左上角警示三角 -->
+  <g transform="translate(620, 200)">
+    <polygon points="0,-90 78,55 -78,55" fill="#e63946"/>
+    <text x="0" y="20" font-family="Helvetica, Arial, sans-serif" font-size="60" font-weight="900" fill="#ffffff" text-anchor="middle">!</text>
+  </g>
+
+  <!-- 10 个避坑（2 列布局）-->
+  <g transform="translate(60, 420)">
+    <g font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1a1a1a">
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="320" height="38" fill="#1a1a1a"/>
+        <text x="15" y="25" fill="#e63946">01</text>
+        <text x="60" y="25" fill="#ffffff">封面花哨，文字太多</text>
+      </g>
+      <g transform="translate(360, 0)">
+        <rect x="0" y="0" width="320" height="38" fill="#1a1a1a"/>
+        <text x="15" y="25" fill="#e63946">02</text>
+        <text x="60" y="25" fill="#ffffff">标题党，正文跑题</text>
+      </g>
+
+      <g transform="translate(0, 48)">
+        <rect x="0" y="0" width="320" height="38" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+        <text x="15" y="25" fill="#e63946">03</text>
+        <text x="60" y="25" fill="#1a1a1a">乱用关键词，被限流</text>
+      </g>
+      <g transform="translate(360, 48)">
+        <rect x="0" y="0" width="320" height="38" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+        <text x="15" y="25" fill="#e63946">04</text>
+        <text x="60" y="25" fill="#1a1a1a">日更不断，灵感枯竭</text>
+      </g>
+
+      <g transform="translate(0, 96)">
+        <rect x="0" y="0" width="320" height="38" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+        <text x="15" y="25" fill="#e63946">05</text>
+        <text x="60" y="25" fill="#1a1a1a">照搬爆款，缺个人感</text>
+      </g>
+      <g transform="translate(360, 96)">
+        <rect x="0" y="0" width="320" height="38" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+        <text x="15" y="25" fill="#e63946">06</text>
+        <text x="60" y="25" fill="#1a1a1a">忽略评论，错失流量</text>
+      </g>
+
+      <g transform="translate(0, 144)">
+        <rect x="0" y="0" width="320" height="38" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+        <text x="15" y="25" fill="#e63946">07</text>
+        <text x="60" y="25" fill="#1a1a1a">数据焦虑，频繁删帖</text>
+      </g>
+      <g transform="translate(360, 144)">
+        <rect x="0" y="0" width="320" height="38" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+        <text x="15" y="25" fill="#e63946">08</text>
+        <text x="60" y="25" fill="#1a1a1a">不发笔记，纯靠搬运</text>
+      </g>
+
+      <g transform="translate(0, 192)">
+        <rect x="0" y="0" width="320" height="38" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+        <text x="15" y="25" fill="#e63946">09</text>
+        <text x="60" y="25" fill="#1a1a1a">群发硬广，掉权重</text>
+      </g>
+      <g transform="translate(360, 192)">
+        <rect x="0" y="0" width="320" height="38" fill="#1a1a1a"/>
+        <text x="15" y="25" fill="#e63946">10</text>
+        <text x="60" y="25" fill="#ffffff">不复盘，重复踩坑</text>
+      </g>
+    </g>
+  </g>
+
+  <text x="60" y="960" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1a1a1a" letter-spacing="3">XHS · METHOD 06 / 08</text>
+  <text x="740" y="960" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1a1a1a" text-anchor="end" letter-spacing="3">范家读本</text>
+</svg>

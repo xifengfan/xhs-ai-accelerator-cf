@@ -1,0 +1,14 @@
+{
+  "name": "xhs-ai-accelerator",
+  "version": "2.0.0",
+  "description": "小红书 AI 加速器 · Cloudflare Pages 部署版",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler pages dev .",
+    "deploy": "wrangler pages deploy ."
+  },
+  "devDependencies": {
+    "wrangler": "^3.78.0"
+  }
+}

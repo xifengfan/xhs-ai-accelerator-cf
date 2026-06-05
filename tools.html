@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 工具 · 小红书 AI 加速器</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          brand: { 50:'#fff1f0', 100:'#ffdedb', 500:'#e63946', 600:'#c1121f', 900:'#780000' },
+          ink:   { 900:'#1a1a1a', 700:'#3d3d3d', 500:'#737373', 300:'#d4d4d4', 100:'#f5f5f5' }
+        }
+      }}
+    }
+  </script>
+</head>
+<body class="bg-white text-ink-900 font-sans antialiased">
+
+  <!-- ========== 顶部导航 ========== -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-ink-100">
+    <nav class="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="w-7 h-7 rounded-md bg-brand-500 text-white grid place-items-center font-bold">小</span>
+        <span class="font-semibold">小红书 AI 加速器</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-6 text-sm text-ink-700">
+        <li><a href="tools.html"   class="text-brand-500 font-medium">AI 工具</a></li>
+        <li><a href="methods.html" class="hover:text-brand-500">方法论</a></li>
+        <li><a href="pricing.html" class="hover:text-brand-500">定价</a></li>
+        <li class="text-ink-500">积分：<span id="nav-points" class="text-brand-500 font-semibold">10</span></li>
+      </ul>
+      <a href="pricing.html" class="hidden md:inline-block px-3 py-1.5 text-sm rounded-md bg-brand-500 text-white hover:bg-brand-600">立即开通</a>
+    </nav>
+    <!-- ad-slot-1: 导航栏广告位，预留 -->
+    <div class="ad-slot-1 hidden bg-ink-100 border-y border-ink-300" data-ad="true" data-slot="nav">
+      <div class="max-w-6xl mx-auto px-4 py-2 text-xs text-ink-500 text-center">
+        <span class="px-1.5 py-0.5 rounded bg-amber-100 text-amber-700 mr-2">广告</span>
+        （广告位 1：导航栏下方）
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-12 space-y-16">
+
+    <div class="text-center">
+      <h1 class="text-3xl md:text-4xl font-bold mb-2">AI 工具</h1>
+      <p class="text-ink-500">选择工具 → 输入 → 30 秒拿到结果</p>
+      <p class="mt-2 text-sm text-ink-500">当前积分：<span id="tools-points" class="text-brand-500 font-semibold">10</span></p>
+    </div>
+
+    <!-- ========== 工具 1：爆款标题生成器 ========== -->
+    <section id="title" class="p-6 md:p-8 rounded-lg border border-ink-100">
+      <div class="flex items-start justify-between mb-2">
+        <h2 class="text-xl font-semibold">✍️ 爆款标题生成器</h2>
+        <span class="text-xs text-brand-500">1 积分/次</span>
+      </div>
+      <p class="text-sm text-ink-500 mb-6">输入主题 / 关键词，AI 输出 5 个高 CTR 标题 + 钩子句 + emoji 建议。</p>
+
+      <label class="block text-sm font-medium mb-1">主题 / 关键词</label>
+      <textarea id="title-input" rows="3" placeholder="例：新手妈妈带娃出门好物、2026 春季穿搭…"
+        class="w-full p-3 rounded-md border border-ink-300 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none"></textarea>
+
+      <div class="mt-4 flex gap-3">
+        <button id="title-run" class="px-5 py-2.5 rounded-md bg-brand-500 text-white hover:bg-brand-600">生成标题</button>
+        <button id="title-clear" class="px-5 py-2.5 rounded-md border border-ink-300 text-ink-700 hover:border-brand-500">清空</button>
+      </div>
+
+      <!-- 工具结果区 -->
+      <div id="title-result" class="hidden mt-6 p-5 rounded-md bg-ink-100">
+        <div id="title-meta" class="text-xs text-ink-500 mb-3"></div>
+        <ul id="title-list" class="space-y-2 text-sm"></ul>
+      </div>
+    </section>
+
+    <!-- ad-slot-3: 工具结果下方广告位，预留 -->
+    <div class="ad-slot-3 hidden" data-ad="true" data-slot="tool-result">
+      <div class="rounded-lg border-2 border-dashed border-ink-300 bg-ink-100 p-6 text-center text-sm text-ink-500">
+        <span class="inline-block px-2 py-0.5 rounded bg-amber-100 text-amber-700 mr-2">推广</span>
+        （广告位 3：工具结果下方 · 1:1 卡片 / 移动端通栏）
+      </div>
+    </div>
+
+    <!-- ========== 工具 2：小红书笔记生成 ========== -->
+    <section id="note" class="p-6 md:p-8 rounded-lg border border-ink-100">
+      <div class="flex items-start justify-between mb-2">
+        <h2 class="text-xl font-semibold">🪄 小红书笔记生成</h2>
+        <span class="text-xs text-brand-500">1 积分/次</span>
+      </div>
+      <p class="text-sm text-ink-500 mb-6">把平淡的初稿改写为小红书爆款体，保留你的口吻。</p>
+
+      <label class="block text-sm font-medium mb-1">原始草稿</label>
+      <textarea id="note-input" rows="6" placeholder="粘贴你的初稿…"
+        class="w-full p-3 rounded-md border border-ink-300 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none"></textarea>
+
+      <div class="mt-4 flex gap-3">
+        <button id="note-run" class="px-5 py-2.5 rounded-md bg-brand-500 text-white hover:bg-brand-600">改写润色</button>
+        <button id="note-clear" class="px-5 py-2.5 rounded-md border border-ink-300 text-ink-700 hover:border-brand-500">清空</button>
+      </div>
+
+      <div id="note-result" class="hidden mt-6 p-5 rounded-md bg-ink-100">
+        <div id="note-meta" class="text-xs text-ink-500 mb-3"></div>
+        <div id="note-text" class="whitespace-pre-wrap text-sm"></div>
+        <div id="note-tags" class="mt-3 hidden"></div>
+        <div id="note-structure"></div>
+      </div>
+    </section>
+
+    <!-- 积分不足提示弹窗（D1 用 alert 占位，可后续替换为自定义 toast） -->
+    <div id="points-modal" class="hidden fixed inset-0 z-50 bg-black/40 grid place-items-center p-4">
+      <div class="bg-white rounded-lg p-6 max-w-sm w-full text-center">
+        <h3 class="text-lg font-semibold mb-2">积分不足</h3>
+        <p class="text-sm text-ink-700 mb-5">继续使用 AI 工具，请先充值积分。</p>
+        <div class="flex gap-3 justify-center">
+          <button id="points-close" class="px-4 py-2 rounded-md border border-ink-300">稍后</button>
+          <a href="pricing.html" class="px-4 py-2 rounded-md bg-brand-500 text-white">立即充值</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="border-t border-ink-100 py-8 text-center text-xs text-ink-500">
+    <p>© 2026 小红书 AI 加速器</p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // ---- 工具函数（D2 by 吕玲绮） ----
+    function escapeHtml(s) {
+      return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+    function escapeAttr(s) { return escapeHtml(s); }
+    async function copyToClipboard(text, btn) {
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(text);
+        } else {
+          // fallback: textarea + execCommand
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        }
+        if (btn) {
+          const orig = btn.textContent;
+          btn.textContent = '已复制';
+          setTimeout(() => { btn.textContent = orig; }, 1200);
+        }
+      } catch (e) {
+        console.warn('[copy] 失败', e);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      App.init();
+      App.track('page_view', { page: 'tools' });
+      App.refreshPointsBadge();
+      document.getElementById('tools-points').textContent = App.getPoints();
+
+      // 工具 1：爆款标题（D2 by 吕玲绮 · 真调 API）
+      const titleRunBtn = document.getElementById('title-run');
+      const titleResultBox = document.getElementById('title-result');
+      const titleListEl = document.getElementById('title-list');
+      const titleMetaEl = document.getElementById('title-meta');
+
+      function renderTitleList(titles, meta) {
+        titleListEl.innerHTML = titles.map(t => {
+          const formulaTag = t.formulaName ? `<span class="ml-2 text-xs text-ink-500">[${t.formulaName}]</span>` : '';
+          const hookLine = t.hook ? `<div class="text-xs text-ink-500 mt-1">💡 ${escapeHtml(t.hook)}</div>` : '';
+          return `<li class="p-3 bg-white rounded border border-ink-100">
+            <div class="flex items-start">
+              <span class="text-brand-500 font-semibold mr-2">${t.rank || ''}.</span>
+              <div class="flex-1">
+                <div class="font-medium">${escapeHtml(t.title)}${t.emoji ? ' ' + t.emoji : ''}${formulaTag}</div>
+                ${hookLine}
+              </div>
+              <button class="copy-btn ml-2 px-2 py-1 text-xs rounded border border-ink-300 hover:border-brand-500" data-copy="${escapeAttr(t.title)}">复制</button>
+            </div>
+          </li>`;
+        }).join('');
+        // 绑定复制按钮
+        titleListEl.querySelectorAll('.copy-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const text = btn.getAttribute('data-copy') || '';
+            copyToClipboard(text, btn);
+            App.track('content_copy', { contentType: 'title' });
+          });
+        });
+        if (titleMetaEl && meta) {
+          const cachedTag = meta.cached ? '<span class="text-amber-600">缓存</span>' : '<span class="text-emerald-600">实时</span>';
+          titleMetaEl.innerHTML = `${cachedTag} · 模型 ${escapeHtml(meta.model || '-')} · 耗时 ${meta.elapsedMs || 0}ms · 成本 ¥${(meta.cost || 0).toFixed(6)}`;
+        }
+        titleResultBox.classList.remove('hidden');
+      }
+
+      titleRunBtn.addEventListener('click', async () => {
+        const input = document.getElementById('title-input').value.trim();
+        if (!input) { alert('请输入主题或关键词'); return; }
+        if (!App.consumePoints(1)) { App.showInsufficientPoints(); return; }
+        App.track('tool_use', { tool: 'title_generator' });
+
+        // 锁定按钮 + 显示 loading
+        titleRunBtn.disabled = true;
+        const origText = titleRunBtn.textContent;
+        titleRunBtn.textContent = '生成中…';
+        titleResultBox.classList.add('hidden');
+
+        const t0 = Date.now();
+        const res = await App.callAI('title', input);
+        const elapsed = Date.now() - t0;
+
+        titleRunBtn.disabled = false;
+        titleRunBtn.textContent = origText;
+
+        if (!res.ok) {
+          alert(`生成失败：${res.message || '请稍后重试'}`);
+          // 失败退积分
+          App.addPoints(1);
+          App.track('tool_generate_failed', { tool: 'title', error: res.error, elapsedMs: elapsed });
+          return;
+        }
+        renderTitleList(res.data, { ...res.tier, cached: res.cached, cost: res.cost, elapsedMs: res.elapsedMs });
+        document.getElementById('tools-points').textContent = App.getPoints();
+        App.track('tool_generate', { tool: 'title', cached: res.cached, elapsedMs: res.elapsedMs, cost: res.cost });
+      });
+      document.getElementById('title-clear').addEventListener('click', () => {
+        document.getElementById('title-input').value = '';
+        titleResultBox.classList.add('hidden');
+      });
+
+      // 工具 2：润色改写（D2 by 吕玲绮 · 真调 API）
+      const noteRunBtn = document.getElementById('note-run');
+      const noteResultBox = document.getElementById('note-result');
+      const noteTextEl = document.getElementById('note-text');
+      const noteMetaEl = document.getElementById('note-meta');
+      const noteTagsEl = document.getElementById('note-tags');
+      const noteStructureEl = document.getElementById('note-structure');
+
+      function renderNoteResult(data, meta) {
+        noteTextEl.textContent = data.note;
+        if (noteMetaEl && meta) {
+          const cachedTag = meta.cached ? '<span class="text-amber-600">缓存</span>' : '<span class="text-emerald-600">实时</span>';
+          noteMetaEl.innerHTML = `${cachedTag} · 模型 ${escapeHtml(meta.model || '-')} · ${data.wordCount || '-'} 字 · 耗时 ${meta.elapsedMs || 0}ms · 成本 ¥${(meta.cost || 0).toFixed(6)}`;
+        }
+        if (noteTagsEl) {
+          if (data.tags && data.tags.length) {
+            noteTagsEl.innerHTML = data.tags.map(t => `<span class="inline-block px-2 py-0.5 mr-1 mb-1 rounded bg-brand-50 text-brand-600 text-xs">${escapeHtml(t)}</span>`).join('');
+            noteTagsEl.classList.remove('hidden');
+          } else {
+            noteTagsEl.classList.add('hidden');
+          }
+        }
+        if (noteStructureEl) {
+          if (data.structure) {
+            const s = data.structure;
+            noteStructureEl.innerHTML = `
+              <details class="mt-3 text-xs text-ink-500">
+                <summary class="cursor-pointer hover:text-brand-500">查看 5 段式结构</summary>
+                <div class="mt-2 space-y-1 pl-3 border-l-2 border-ink-100">
+                  <div><b>① 钩子：</b>${escapeHtml(s.hook || '')}</div>
+                  <div><b>② 场景：</b>${escapeHtml(s.scene || '')}</div>
+                  <div><b>③ 干货：</b>${escapeHtml(s.value || '')}</div>
+                  <div><b>④ 反差：</b>${escapeHtml(s.twist || '')}</div>
+                  <div><b>⑤ CTA：</b>${escapeHtml(s.cta || '')}</div>
+                </div>
+              </details>
+            `;
+          } else {
+            noteStructureEl.innerHTML = '';
+          }
+        }
+        noteResultBox.classList.remove('hidden');
+      }
+
+      noteRunBtn.addEventListener('click', async () => {
+        const input = document.getElementById('note-input').value.trim();
+        if (!input) { alert('请粘贴你的初稿'); return; }
+        if (!App.consumePoints(1)) { App.showInsufficientPoints(); return; }
+        App.track('tool_use', { tool: 'note_generator' });
+
+        noteRunBtn.disabled = true;
+        const origText = noteRunBtn.textContent;
+        noteRunBtn.textContent = '改写中…';
+        noteResultBox.classList.add('hidden');
+
+        const t0 = Date.now();
+        const res = await App.callAI('note', input);
+        const elapsed = Date.now() - t0;
+
+        noteRunBtn.disabled = false;
+        noteRunBtn.textContent = origText;
+
+        if (!res.ok) {
+          alert(`改写失败：${res.message || '请稍后重试'}`);
+          App.addPoints(1);
+          App.track('tool_generate_failed', { tool: 'note', error: res.error, elapsedMs: elapsed });
+          return;
+        }
+        renderNoteResult(res.data, { ...res.tier, cached: res.cached, cost: res.cost, elapsedMs: res.elapsedMs });
+        document.getElementById('tools-points').textContent = App.getPoints();
+        App.track('tool_generate', { tool: 'note', cached: res.cached, elapsedMs: res.elapsedMs, cost: res.cost });
+      });
+      document.getElementById('note-clear').addEventListener('click', () => {
+        document.getElementById('note-input').value = '';
+        noteResultBox.classList.add('hidden');
+      });
+
+      // 关闭积分不足弹窗
+      document.getElementById('points-close').addEventListener('click', () => {
+        document.getElementById('points-modal').classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
+
