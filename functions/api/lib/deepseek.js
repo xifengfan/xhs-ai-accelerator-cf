@@ -24,7 +24,7 @@ async function callDeepSeek(opts) {
   const {
     apiKey,
     prompt,
-    model = 'deepseek-v4-pro',
+    model = 'deepseek-chat',
     timeoutMs = DEFAULT_TIMEOUT_MS,
     maxTokens = 2048,
     temperature = 0.7,
