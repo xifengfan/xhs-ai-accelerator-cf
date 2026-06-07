@@ -195,11 +195,118 @@
     }
   }
 
-  function purchase(packageId) {
+  // ================================================
+  // D7' 重写：真支付链路（调 /api/payment + 弹 QR 模态框）
+  // 修复：之前 D1 占位"假装成功"，现在调后端真实创建订单
+  // ================================================
+  async function purchase(packageId) {
     track('purchase_click', { package: packageId });
-    // D1 模拟直接成功 + 跳 success 页
-    location.href = `success.html?package=${encodeURIComponent(packageId)}`;
+
+    // 1. 取/生成本地 userId（匿名 ID，存 localStorage，跨会话稳定）
+    const KEY_UID = 'xhs.userId';
+    let userId = lsGet(KEY_UID, null);
+    if (!userId) {
+      userId = 'u_' + Math.random().toString(36).slice(2, 10) + Date.now().toString(36).slice(-4);
+      lsSet(KEY_UID, userId);
+    }
+
+    // 2. 调后端创建订单
+    let json;
+    try {
+      const resp = await fetch('/api/payment', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ packageId, userId }),
+      });
+      json = await resp.json().catch(() => ({}));
+      if (!resp.ok || !json.ok) {
+        trackAndShowError('purchase', json);
+        return;
+      }
+    } catch (e) {
+      trackAndShowError('purchase', { error: 'NETWORK_ERROR', message: e.message });
+      return;
+    }
+
+    // 3. 弹 QR 模态框
+    showPaymentModal({
+      order: json.order,
+      instructions: json.instructions,
+    });
   }
+
+  /**
+   * 弹出支付模态框 - 显示 QR + 操作指引
+   * @param {object} payload - { order, instructions }
+   */
+  function showPaymentModal({ order, instructions }) {
+    // 移除旧模态框
+    const old = document.getElementById('payment-modal');
+    if (old) old.remove();
+
+    const modal = document.createElement('div');
+    modal.id = 'payment-modal';
+    modal.className = 'fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.innerHTML = `
+      <div class="bg-white rounded-2xl max-w-md w-full p-6 md:p-8 relative shadow-2xl">
+        <button id="pm-close" class="absolute top-3 right-3 w-9 h-9 grid place-items-center rounded-full hover:bg-ink-100 text-ink-500 text-xl" aria-label="关闭">×</button>
+
+        <h2 class="text-xl font-bold mb-1 text-center">扫码支付</h2>
+        <p class="text-sm text-ink-500 text-center mb-5">${escapeHtml(order.packageName)} · ¥${order.amount}</p>
+
+        <div class="bg-ink-100 rounded-xl p-4 mb-4 flex items-center justify-center" style="min-height:260px">
+          <img src="${escapeAttr(order.paymentUrl)}" alt="微信收款码" class="max-w-full max-h-64 object-contain"
+               onerror="this.parentElement.innerHTML='<div class=&quot;text-center text-ink-500 text-sm&quot;>二维码加载失败<br>请刷新重试或联系主公</div>'" />
+        </div>
+
+        <div class="space-y-2 text-sm text-ink-700 mb-5">
+          <p><span class="inline-block w-5 h-5 rounded-full bg-brand-500 text-white text-xs grid place-items-center mr-2">1</span>${escapeHtml(instructions.step1)}</p>
+          <p><span class="inline-block w-5 h-5 rounded-full bg-brand-500 text-white text-xs grid place-items-center mr-2">2</span>${escapeHtml(instructions.step2)}</p>
+          <p><span class="inline-block w-5 h-5 rounded-full bg-brand-500 text-white text-xs grid place-items-center mr-2">3</span>${escapeHtml(instructions.step3)}</p>
+        </div>
+
+        <div class="bg-ink-100 rounded-lg p-3 text-xs text-ink-500 mb-4">
+          <div class="flex justify-between"><span>订单号</span><span class="font-mono">${escapeHtml(order.orderId)}</span></div>
+          <div class="flex justify-between mt-1"><span>状态</span><span class="text-amber-600">${escapeHtml(order.status)}</span></div>
+        </div>
+
+        <div class="flex gap-2">
+          <button id="pm-paid" class="flex-1 py-2.5 rounded-md bg-brand-500 text-white hover:bg-brand-600 text-sm font-medium">我已完成支付</button>
+          <button id="pm-cancel" class="px-4 py-2.5 rounded-md border border-ink-300 text-ink-700 hover:border-brand-500 text-sm">稍后</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+    document.body.style.overflow = 'hidden';
+
+    // 关闭逻辑
+    const close = () => {
+      modal.remove();
+      document.body.style.overflow = '';
+    };
+    modal.querySelector('#pm-close').onclick = close;
+    modal.querySelector('#pm-cancel').onclick = close;
+    modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+    document.addEventListener('keydown', function esc(e) {
+      if (e.key === 'Escape') { close(); document.removeEventListener('keydown', esc); }
+    });
+
+    // "我已完成支付" 跳 success 页
+    modal.querySelector('#pm-paid').onclick = () => {
+      close();
+      track('purchase_paid_click', { orderId: order.orderId });
+      location.href = `success.html?package=${encodeURIComponent(order.packageId)}&orderId=${encodeURIComponent(order.orderId)}`;
+    };
+  }
+
+  // 简易 HTML 转义（防 XSS）
+  function escapeHtml(s) {
+    if (s == null) return '';
+    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  function escapeAttr(s) { return escapeHtml(s); }
 
   /**
    * D6 新增：用户申请退款的前端封装
